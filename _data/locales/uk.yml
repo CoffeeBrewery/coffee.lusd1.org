@@ -27,7 +27,7 @@ uk:
       та контриб’юторами Homebrew. У створенні формул вам допоможе <a href="https://docs.brew.sh/Formula-Cookbook">Formula Cookbook</a>.
     casks: <a href="https://docs.brew.sh/Formula-Cookbook#homebrew-terminology">Каски</a>
       це пакети, які встановлюють попередньо створені бінарні файли, такі як застосунки, шрифти та плагіни.
-    casks_help: Деякі каски <a href="https://docs.brew.sh/Cask-Cookbook#stanza-auto_updates">оновлюються самостійно</a>,
+    casks_help: Деякі каски <a href="https://docs.brew.sh/Cask-Cookbook#optional-stanzas">оновлюються самостійно</a>,
       без допомоги Homebrew, тому використовуй <code>brew upgrade --greedy</code> якщо бажаєш, щоб Homebrew
       Їх також оновлював. Каскам в <a href="https://github.com/Homebrew/homebrew-cask">homebrew/cask</a>
       потрібна перевірка людиною перш ніж вони будуть прийняті, відредаговані або оновлені, і повинні відповідати вимогам
@@ -56,13 +56,12 @@ uk:
       pkginstaller: Якщо ти використовуєш macOS, спробуй наш інсталятор <code>.pkg</code> для інтерактивної або автоматичної інсталяції за допомогою MDM.
       githubrelease: Завантаж його з останнього релізу на GitHub з <a href="https://github.com/Homebrew/brew/releases/latest">Homebrew</a>.
       supported: Homebrew <a href="https://docs.brew.sh/Support-Tiers">підтримує</a>
-        macOS (Sonoma 14 або новіші), Linux та Windows Subsystem for Linux (WSL).
+        macOS (__MACOS_MINIMUM__ або новіші), Linux та Windows Subsystem for Linux (WSL).
     doc:
       resources: "\U0001F4DA Ресурси Homebrew"
       documentation: Документація
       man: Почитати посібник Homebrew можна за допомогою <a href="https://docs.brew.sh/Manpage"><code>man
         brew</code></a>.
-      man_summary:
       further: Додаткова документація
       further_summary: Почитати інструкції з <a href="https://docs.brew.sh/Installation">інсталяції</a>,
         <a href="https://docs.brew.sh/Troubleshooting">вирішенні технічних проблем</a>,

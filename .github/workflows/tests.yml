@@ -18,10 +18,24 @@ jobs:
           persist-credentials: false
 
       - name: Install Ruby
-        uses: Homebrew/actions/setup-ruby@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
+        uses: Homebrew/actions/setup-ruby@d482da0e602890d3160aade42e72c8556103bf04 # 2026.10.26.1
         with:
           setup-homebrew: true
           bundler-cache: true
+
+      - name: Check out macOS support constants
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Homebrew/brew
+          path: brew
+          sparse-checkout: |
+            Library/Homebrew/brew.sh
+            Library/Homebrew/macos_version.rb
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+
+      - name: Set homepage macOS minimum
+        run: ruby .github/actions/update-macos.rb
 
       - name: Run HTML Proofer tests
         run: bundle exec rake test
@@ -36,10 +50,10 @@ jobs:
 
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
+        uses: Homebrew/actions/setup-homebrew@d482da0e602890d3160aade42e72c8556103bf04 # 2026.10.26.1
 
       - name: Install vale
-        uses: Homebrew/actions/cache-homebrew-prefix@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
+        uses: Homebrew/actions/cache-homebrew-prefix@d482da0e602890d3160aade42e72c8556103bf04 # 2026.10.26.1
         with:
           install: vale
 

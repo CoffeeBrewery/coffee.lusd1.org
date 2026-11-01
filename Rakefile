@@ -17,6 +17,11 @@ end
 
 desc "Run html proofer to validate the HTML output."
 task test: :build_test do
+  unresolved = Dir.glob("_site/**/*.html").select do |path|
+    File.read(path, encoding: "UTF-8").include?("__MACOS_MINIMUM__")
+  end
+  abort "Unresolved macOS support placeholder in:\n#{unresolved.join("\n")}" unless unresolved.empty?
+
   require "html-proofer"
   HTMLProofer.check_directory(
     "./_site",
@@ -32,6 +37,8 @@ task test: :build_test do
       "https://www.patreon.com/homebrew",
       %r{^https://twitter\.com/},
       %r{^https://github\.com/Homebrew/brew.+},
+      # Redirects to LinkedIn, which returns 999 to non-browser clients.
+      "https://ahmadsantarissy.com",
     ]
   ).run
 end
