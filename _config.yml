@@ -1,6 +1,6 @@
-title: Homebrew
-description: The Package Manager for Everywhere.
-url: https://brew.sh
+url: "https://coffee.lusd1.org"
+title: "CoffeeBrewery"
+description: "The Package Manager for Everywhere"
 
 exclude:
   - .playwright-cli/
@@ -9,7 +9,7 @@ exclude:
   - bin/
   - brew/
   - CNAME
-  - formulae.brew.sh/
+  - coffee-formulae.lusd1.org/
   - Gemfile*
   - Rakefile
   - README.md
@@ -38,12 +38,12 @@ defaults:
     values:
       image: /assets/img/homebrew-social-card.png
 
-logo: /assets/img/homebrew.svg
+logo: /assets/img/coffeebrewery.png
 
 github:
-  repository_nwo: Homebrew/brew.sh
+  repository_nwo: CoffeeBrewery/coffee.lusd1.org
 
-forkme_nwo: Homebrew/brew
+forkme_nwo: CoffeeBrewery/coffee
 
 twitter:
   username: MacHomebrew
