@@ -37,13 +37,13 @@ layout: base
         <div class="col-2 example-panel">
           <p>{{ t.pagecontent.how }}</p>
 {% highlight bash -%}
-$ brew install ffmpeg firefox
-$ find $(brew --cellar)/ffmpeg
+$ coffee install ffmpeg firefox
+$ find $(coffee --cellar)/ffmpeg
 /opt/CoffeeBrewery/Cellar/ffmpeg/8.1.1/bin/ffmpeg
 /opt/CoffeeBrewery/Cellar/ffmpeg/8.1.1/share/man/man1/ffmpeg.1
-$ ls -l $(brew --prefix)/bin
+$ ls -l $(coffee --prefix)/bin
 /opt/CoffeeBrewery/bin/ffmpeg -> ../Cellar/ffmpeg/8.1.1/bin/ffmpeg
-$ find $(brew --caskroom)/firefox
+$ find $(coffee --caskroom)/firefox
 /opt/CoffeeBrewery/Caskroom/firefox/151.0.3/Firefox.app
 $ ls /Applications
 Firefox.app
@@ -63,7 +63,7 @@ Firefox.app
         </div>
         <div class="col-2">
 {% highlight bash -%}
-$ brew create https://ffmpeg.org/releases/ffmpeg-8.1.1.tar.xz
+$ coffee create https://ffmpeg.org/releases/ffmpeg-8.1.1.tar.xz
 Created .../CoffeeBrewery-core/Formula/ffmpeg.rb
 {%- endhighlight %}
 {% highlight ruby -%}
@@ -92,7 +92,7 @@ end
         </div>
         <div class="col-2">
 {% highlight bash -%}
-$ brew create --cask https://download-installer.cdn.mozilla.net/pub/firefox/releases/151.0.3/mac/en-US/Firefox%20151.0.3.dmg
+$ coffee create --cask https://download-installer.cdn.mozilla.net/pub/firefox/releases/151.0.3/mac/en-US/Firefox%20151.0.3.dmg
 Created .../CoffeeBrewery-cask/Casks/firefox.rb
 {%- endhighlight %}
 {% highlight ruby -%}
@@ -124,7 +124,7 @@ brew "ffmpeg"
 cask "firefox"
 {%- endhighlight %}
 {% highlight bash -%}
-$ brew bundle
+$ coffee bundle
 Installing ffmpeg
 Installing firefox
 `brew bundle` complete! 2 Brewfile dependencies now installed.
