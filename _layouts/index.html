@@ -31,7 +31,7 @@ layout: base
         <div class="col-1">
           <p>{{ t.pagecontent.what }}</p>
           <figure class="install-demo">
-            <img src="{{ "/assets/img/brew-install.gif" | relative_url }}" alt="Homebrew install command running in a terminal" decoding="async">
+            <img src="{{ "/assets/img/brew-install.gif" | relative_url }}" alt="CoffeeBrewery install command running in a terminal" decoding="async">
           </figure>
         </div>
         <div class="col-2 example-panel">
@@ -39,12 +39,12 @@ layout: base
 {% highlight bash -%}
 $ brew install ffmpeg firefox
 $ find $(brew --cellar)/ffmpeg
-/opt/homebrew/Cellar/ffmpeg/8.1.1/bin/ffmpeg
-/opt/homebrew/Cellar/ffmpeg/8.1.1/share/man/man1/ffmpeg.1
+/opt/CoffeeBrewery/Cellar/ffmpeg/8.1.1/bin/ffmpeg
+/opt/CoffeeBrewery/Cellar/ffmpeg/8.1.1/share/man/man1/ffmpeg.1
 $ ls -l $(brew --prefix)/bin
-/opt/homebrew/bin/ffmpeg -> ../Cellar/ffmpeg/8.1.1/bin/ffmpeg
+/opt/CoffeeBrewery/bin/ffmpeg -> ../Cellar/ffmpeg/8.1.1/bin/ffmpeg
 $ find $(brew --caskroom)/firefox
-/opt/homebrew/Caskroom/firefox/151.0.3/Firefox.app
+/opt/CoffeeBrewery/Caskroom/firefox/151.0.3/Firefox.app
 $ ls /Applications
 Firefox.app
 {%- endhighlight %}
@@ -54,7 +54,7 @@ Firefox.app
 
     <li>
       <div class="group row">
-        <h2 id="homebrew-formulae">{{ t.pagecontent.formulae_title }}</h2>
+        <h2 id="CoffeeBrewery-formulae">{{ t.pagecontent.formulae_title }}</h2>
         <div class="col-1 package-copy">
           <p>{{ t.pagecontent.createpackages }}</p>
           <p>{{ t.pagecontent.formulae }}</p>
@@ -64,7 +64,7 @@ Firefox.app
         <div class="col-2">
 {% highlight bash -%}
 $ brew create https://ffmpeg.org/releases/ffmpeg-8.1.1.tar.xz
-Created .../homebrew-core/Formula/ffmpeg.rb
+Created .../CoffeeBrewery-core/Formula/ffmpeg.rb
 {%- endhighlight %}
 {% highlight ruby -%}
 class Ffmpeg < Formula
@@ -93,7 +93,7 @@ end
         <div class="col-2">
 {% highlight bash -%}
 $ brew create --cask https://download-installer.cdn.mozilla.net/pub/firefox/releases/151.0.3/mac/en-US/Firefox%20151.0.3.dmg
-Created .../homebrew-cask/Casks/firefox.rb
+Created .../CoffeeBrewery-cask/Casks/firefox.rb
 {%- endhighlight %}
 {% highlight ruby -%}
 cask "firefox" do
@@ -112,7 +112,7 @@ end
 
     <li>
       <section class="group row">
-        <h2 id="homebrew-bundle">{{ t.pagecontent.bundle_title }}</h2>
+        <h2 id="CoffeeBrewery-bundle">{{ t.pagecontent.bundle_title }}</h2>
         <div class="col-1">
           <p>{{ t.pagecontent.bundle }}</p>
           <p>{{ t.pagecontent.bundle_types }}</p>
@@ -154,23 +154,23 @@ Installing firefox
             {% endif -%}
           </article>
           <article class="doc-card">
-            <h3 id="homebrew-blog">{{ t.pagecontent.doc.blog }}</h3>
+            <h3 id="CoffeeBrewery-blog">{{ t.pagecontent.doc.blog }}</h3>
             {% if t.pagecontent.doc.blog_summary -%}
               <p>{{ t.pagecontent.doc.blog_summary }}</p>
             {% endif -%}
             {% assign latest_post = site.posts.first -%}
             {% if latest_post -%}
-              <p class="latest-post"><span>{{ t.pagecontent.doc.blog_latest_post }}</span><a href="{{ latest_post.url | relative_url }}">Homebrew {{ latest_post.title }}</a></p>
+              <p class="latest-post"><span>{{ t.pagecontent.doc.blog_latest_post }}</span><a href="{{ latest_post.url | relative_url }}">CoffeeBrewery {{ latest_post.title }}</a></p>
             {% endif -%}
           </article>
           <article class="doc-card">
-            <h3 id="homebrew-community">{{ t.pagecontent.doc.community }}</h3>
+            <h3 id="CoffeeBrewery-community">{{ t.pagecontent.doc.community }}</h3>
             {% if t.pagecontent.doc.community_summary -%}
               <p>{{ t.pagecontent.doc.community_summary }}</p>
             {% endif -%}
           </article>
           <article class="doc-card">
-            <h3 id="homebrew-packages">{{ t.pagecontent.doc.formulae }}</h3>
+            <h3 id="CoffeeBrewery-packages">{{ t.pagecontent.doc.formulae }}</h3>
             {% if t.pagecontent.doc.formulae_summary -%}
               <p>{{ t.pagecontent.doc.formulae_summary }}</p>
             {% endif -%}
@@ -182,7 +182,7 @@ Installing firefox
             {% endif -%}
           </article>
           <article class="doc-card">
-            <h3 id="homebrew-social">{{ t.pagecontent.doc.social }}</h3>
+            <h3 id="CoffeeBrewery-social">{{ t.pagecontent.doc.social }}</h3>
             {% if t.pagecontent.doc.social_summary -%}
               <p>{{ t.pagecontent.doc.social_summary }}</p>
             {% endif -%}
